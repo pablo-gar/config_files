@@ -41,6 +41,9 @@ Plug 'lervag/vimtex'
 " Fast python completion (use ncm2 if you want type info or snippet support)
 Plug 'HansPinckaers/ncm2-jedi'
 
+" Nice status bar
+PLug vim-airline/vim-airline
+
 " Words in buffer completion
 Plug 'ncm2/ncm2-bufword'
 " Filepath completion
@@ -192,4 +195,19 @@ let R_rconsole_width = 0
 let R_rconsole_height = 20
 
 " END Nvim-R config
+"----------------------------
+
+
+
+"----------------------------
+" Ale config (syntax correction)
+
+" Enable nice status through airline
+let g:airline#extensions#ale#enabled = 1
+
+"Move between errors mapping
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" END Ale config (syntax correction)
 "----------------------------
