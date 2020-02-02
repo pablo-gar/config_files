@@ -42,7 +42,8 @@ Plug 'lervag/vimtex'
 Plug 'HansPinckaers/ncm2-jedi'
 
 " Nice status bar
-PLug vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Words in buffer completion
 Plug 'ncm2/ncm2-bufword'
@@ -50,7 +51,7 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 
 " Syntax checking
-" Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " Map shift+j for ultsnips (snippets)
 let g:UltiSnipsExpandTrigger = "<C-j>"
@@ -177,6 +178,9 @@ vmap <Space> <Plug>RDSendSelection
 " remapping selection :: send multiple lines + echo lines
 vmap <Space>e <Plug>RESendSelection
 
+" remapping sending a markdonw chunk
+nmap <C-Space> <Plug>RSendChunk
+
 " To go into normal mode while in R terminal do <C-\><C-N>
 let R_esc_term = 0
 
@@ -197,17 +201,29 @@ let R_rconsole_height = 20
 " END Nvim-R config
 "----------------------------
 
-
-
 "----------------------------
-" Ale config (syntax correction)
+" ale config (syntax correction)
 
 " Enable nice status through airline
-let g:airline#extensions#ale#enabled = 1
+"let g:airline#extensions#ale#enabled = 1
 
 "Move between errors mapping
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" Check Python files with flake8 and pylint.
+let b:ale_linters = ['autopep8', 'isort', 'yapf']
+" Fix Python files with autopep8 and yapf.
+let b:ale_fixers = ['autopep8', 'isort', 'yapf']
+
 " END Ale config (syntax correction)
+"----------------------------
+
+
+"----------------------------
+" vim-airline config (status bar)
+
+let g:airline_theme='papercolor'
+
+" END vim-airline config (status bar)
 "----------------------------
