@@ -1,0 +1,7 @@
+[user]
+	name = Pablo E Garcia-Nieto
+	email = paedugar@gmail.com
+[core]
+	editor = vim
+[alias]
+	add-commit = !git add -A && git commit
