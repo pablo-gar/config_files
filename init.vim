@@ -67,7 +67,7 @@ call plug#end()
 " END PLUGINS
 "----------------------------
 "
-let g:python3_host_prog="/home/users/paedugar/.conda/envs/pybase/bin/python3"
+let g:python3_host_prog="/opt/anaconda3/bin/python3"
 colorscheme peachpuff
     
 
