@@ -153,7 +153,7 @@ nnoremap o ox<BS>
 nnoremap O Ox<BS>
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-nP :nohl<CR><C-l>
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Tab == n spaces
 set expandtab
